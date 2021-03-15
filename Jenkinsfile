@@ -15,15 +15,10 @@ pipeline {
 		    withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
 			    sh "docker login -u madhudeva92 -p ${dockerhub} "
 			    sh "docker push ${IMAGE_URL_WITH_TAG}"
-   
-}
-                                       
-                }
+                }                     
             }
         }
-       
-        }
-    }
+    }   
 }
 
 def getDockerTag(){
