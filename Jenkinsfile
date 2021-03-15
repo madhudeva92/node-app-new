@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment{
         DOCKER_TAG = getDockerTag()
-        IMAGE_URL_WITH_TAG = "madhu/node-app:${DOCKER_TAG}"
+        IMAGE_URL_WITH_TAG = "madhudeva92/madhu/node-app:${DOCKER_TAG}"
     }
     stages{
         stage('Build Docker Image'){
